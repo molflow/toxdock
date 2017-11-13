@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-# alias tox='docker run -v /etc/passwd:/etc/passwd -v /etc/group:/etc/group -v "$PWD":/src -u $(id -u) --rm --privileged toxdock tox'
+# alias tox='docker run -v /etc/passwd:/etc/passwd -v /etc/group:/etc/group -v "$PWD":/src -u $(id -u):$(id -g) --rm --privileged toxdock tox'
 
 RUN apt-get update && \
 DEBIAN_FRONTEND=noninteractive apt-get -yqq install \
